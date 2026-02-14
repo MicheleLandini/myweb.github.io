@@ -1,0 +1,30 @@
+/* Mobile CTA Section */
+.mobile-cta-section {
+    display: none; /* Hidden by default on desktop */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.mobile-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 968px) {
+    .mobile-cta-section {
+        display: flex; /* Show on mobile/tablet */
+        min-height: auto; /* Override .section min-height */
+        padding-top: 0;
+        padding-bottom: 4rem;
+    }
+    
+    .mobile-cta-buttons .btn {
+        flex: 1; /* Make buttons expanded on mobile if needed, or keep defined width */
+        max-width: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
