@@ -479,42 +479,221 @@ nav {
 }
 
 /* Contact Page */
-.contact-form {
-    max-width: 600px;
-    margin-top: 2rem;
-}
 
-.form-group {
-    margin-bottom: 2rem;
+.contact-hero {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    text-align: center;
     position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+.contact-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.contact-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.social-cards-section {
+    padding: 0 var(--spacing) 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.social-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-card {
+    background: rgb(145 176 140 / 15%);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .social-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.social-card:hover {
+    transform: translateY(-12px);
+    background: rgb(145 176 140 / 30%);
+}
+
+[data-theme="dark"] .social-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Brand Specific Hover Effects */
+.card-ig:hover {
+    border-color: #E1306C;
+    box-shadow: 0 20px 40px rgba(225, 48, 108, 0.15);
+}
+.card-ig:hover::before {
+    background: radial-gradient(circle at top right, rgba(225, 48, 108, 0.1), transparent 70%);
+    opacity: 1;
+}
+[data-theme="dark"] .card-ig:hover { box-shadow: 0 20px 40px rgba(225, 48, 108, 0.25); }
+
+.card-wa:hover {
+    border-color: #25D366;
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.15);
+}
+.card-wa:hover::before {
+    background: radial-gradient(circle at top right, rgba(37, 211, 102, 0.1), transparent 70%);
+    opacity: 1;
+}
+[data-theme="dark"] .card-wa:hover { box-shadow: 0 20px 40px rgba(37, 211, 102, 0.25); }
+
+.card-fb:hover {
+    border-color: #1877F2;
+    box-shadow: 0 20px 40px rgba(24, 119, 242, 0.15);
+}
+.card-fb:hover::before {
+    background: radial-gradient(circle at top right, rgba(24, 119, 242, 0.1), transparent 70%);
+    opacity: 1;
+}
+[data-theme="dark"] .card-fb:hover { box-shadow: 0 20px 40px rgba(24, 119, 242, 0.25); }
+
+.card-in:hover {
+    border-color: #0A66C2;
+    box-shadow: 0 20px 40px rgba(10, 102, 194, 0.15);
+}
+.card-in:hover::before {
+    background: radial-gradient(circle at top right, rgba(10, 102, 194, 0.1), transparent 70%);
+    opacity: 1;
+}
+[data-theme="dark"] .card-in:hover { box-shadow: 0 20px 40px rgba(10, 102, 194, 0.25); }
+
+.social-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.social-card .icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-card:hover .icon-wrap {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.social-card .icon-wrap svg {
+    width: 34px;
+    height: 34px;
+}
+
+.icon-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.icon-whatsapp  { background: #25D366; }
+.icon-facebook  { background: #1877F2; }
+.icon-linkedin  { background: #0A66C2; }
+
+.social-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.social-card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.social-card .card-link {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border: 1.5px solid var(--text-color);
+    border-radius: 50px;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--text-color);
-    padding: 1rem 0;
-    font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--text-color);
-    outline: none;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-bottom-color: var(--accent-1);
+.social-card:hover .card-link {
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
+
+        @media screen and (max-width: 900px) {
+            .social-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .social-cards-grid {
+                grid-template-columns: 1fr;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+        }
 
 /* Decorative Elements */
 .circle {
@@ -542,6 +721,16 @@ nav {
     left: 5%;
     opacity: 0.15;
     filter: blur(40px);
+}
+
+#threejs-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
 }
 
 /* Page Overview Section */
