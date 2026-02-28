@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Creative Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./logo/logo.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
@@ -18,6 +22,7 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Loader -->
     <div class="loader">
@@ -27,66 +32,8 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <img src="logo/logo.png" alt="ALEX.DEV Logo">
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        
-        <!-- Mobile Theme Toggle -->
-        <button id="mobile-theme-toggle" class="theme-toggle mobile-toggle" aria-label="Toggle Dark Mode">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </button>
-    </div>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Background Circles -->
     <div class="circle circle-1"></div>
@@ -101,45 +48,48 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>
-                        <span>Digital</span>
-                        <span>Experiences</span>
-                        <span>with Soul.</span>
+                        <!--                         <span data-i18n="hero_line1">Digital</span>
+                        <span data-i18n="hero_line2">Experiences</span>
+                        <span data-i18n="hero_line3">with Soul.</span> -->
+                        <span data-i18n="hero_line1">Transform</span>
+                        <span data-i18n="hero_line2">Visions into</span>
+                        <span data-i18n="hero_line3">Digital Reality.</span>
                     </h1>
-                    <p class="hero-subtitle">Minimalist Web Developer & UI Designer</p>
-                    <a href="projects.html" class="btn">View My Work</a>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">Minimalist Web Developer & UI Designer</p>
+                    <a href="projects.html" class="btn" data-i18n="hero_btn">View My Works</a>
                 </div>
-                
+
                 <!-- SVG Morphing Animation -->
                 <div class="hero-svg-container">
                     <svg id="morphing-svg" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                        <rect id="frame" x="50" y="50" width="900" height="900" rx="20" ry="20" 
-                            fill="none" stroke="#E9B44C" stroke-width="4" opacity="0"/>
-                        
+                        <rect id="frame" x="50" y="50" width="900" height="900" rx="20" ry="20" fill="none"
+                            stroke="#E9B44C" stroke-width="4" opacity="0" />
+
                         <g id="ml-signature" opacity="0">
-                            <path d="M 300 600 L 300 400 L 400 550 L 500 400 L 500 600" 
-                                fill="none" stroke="#E9B44C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M 550 400 L 550 600 L 700 600" 
-                                fill="none" stroke="#E9B44C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M 300 600 L 300 400 L 400 550 L 500 400 L 500 600" fill="none" stroke="#E9B44C"
+                                stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M 550 400 L 550 600 L 700 600" fill="none" stroke="#E9B44C" stroke-width="8"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </g>
-                        
+
                         <g id="www-text" opacity="0">
-                            <path d="M 340 500 L 360 580 L 380 520 L 400 580 L 420 500" 
-                                fill="none" stroke="#E9B44C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M 440 500 L 460 580 L 480 520 L 500 580 L 520 500" 
-                                fill="none" stroke="#E9B44C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M 540 500 L 560 580 L 580 520 L 600 580 L 620 500" 
-                                fill="none" stroke="#E9B44C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M 340 500 L 360 580 L 380 520 L 400 580 L 420 500" fill="none" stroke="#E9B44C"
+                                stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M 440 500 L 460 580 L 480 520 L 500 580 L 520 500" fill="none" stroke="#E9B44C"
+                                stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M 540 500 L 560 580 L 580 520 L 600 580 L 620 500" fill="none" stroke="#E9B44C"
+                                stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
-                        
+
                         <g id="pc-icon" opacity="0">
-                            <rect x="350" y="350" width="300" height="200" rx="10" 
-                                fill="none" stroke="#E9B44C" stroke-width="6"/>
-                            <rect x="370" y="370" width="260" height="160" 
-                                fill="none" stroke="#E9B44C" stroke-width="3"/>
-                            <rect x="470" y="550" width="60" height="40" 
-                                fill="none" stroke="#E9B44C" stroke-width="6"/>
-                            <rect x="400" y="590" width="200" height="15" rx="5"
-                                fill="none" stroke="#E9B44C" stroke-width="6"/>
+                            <rect x="350" y="350" width="300" height="200" rx="10" fill="none" stroke="#E9B44C"
+                                stroke-width="6" />
+                            <rect x="370" y="370" width="260" height="160" fill="none" stroke="#E9B44C"
+                                stroke-width="3" />
+                            <rect x="470" y="550" width="60" height="40" fill="none" stroke="#E9B44C"
+                                stroke-width="6" />
+                            <rect x="400" y="590" width="200" height="15" rx="5" fill="none" stroke="#E9B44C"
+                                stroke-width="6" />
                         </g>
                     </svg>
                 </div>
@@ -159,8 +109,10 @@
                         <img src="img/lamp.png" alt="Feature 1" class="card-img">
                     </div>
                     <div class="card-content">
-                        <h3>Creative Design</h3>
-                        <p>Unique and professional designs capable of capturing attention and communicating your message effectively.</p>
+                        <h3 data-i18n="card1_title">Creative Design</h3>
+                        <p data-i18n="card1_desc">Unique and professional designs capable of capturing attention and
+                            communicating your message
+                            effectively.</p>
                     </div>
                 </div>
 
@@ -170,8 +122,9 @@
                         <img src="img/code.png" alt="Feature 2" class="card-img">
                     </div>
                     <div class="card-content">
-                        <h3>Modern Tech</h3>
-                        <p>Using the latest technologies to ensure fast, responsive, and high-performing websites.</p>
+                        <h3 data-i18n="card2_title">Modern Tech</h3>
+                        <p data-i18n="card2_desc">Using the latest technologies to ensure fast, responsive, and
+                            high-performing websites.</p>
                     </div>
                 </div>
 
@@ -181,8 +134,9 @@
                         <img src="img/graf.png" alt="Feature 3" class="card-img">
                     </div>
                     <div class="card-content">
-                        <h3>SEO Optimized</h3>
-                        <p>Built with SEO best practices in mind to help your website rank better in search engines.</p>
+                        <h3 data-i18n="card3_title">SEO Optimized</h3>
+                        <p data-i18n="card3_desc">Built with SEO best practices in mind to help your website rank better
+                            in search engines.</p>
                     </div>
                 </div>
             </div>
@@ -194,8 +148,11 @@
                         <img src="img/word.png" alt="Feature 4" class="card-img">
                     </div>
                     <div class="card-horizontal-content">
-                        <h3>Full Strategy</h3>
-                        <p>A comprehensive approach to your digital presence. From initial concept to final deployment, we cover every aspect to ensure your project's success. We analyze your target audience, optimize user experience, and implement growth strategies.</p>
+                        <h3 data-i18n="card4_title">Full Strategy</h3>
+                        <p data-i18n="card4_desc">A comprehensive approach to your digital presence. From initial
+                            concept to final deployment,
+                            we cover every aspect to ensure your project's success. We analyze your target audience,
+                            optimize user experience, and implement growth strategies.</p>
                     </div>
                 </div>
             </div>
@@ -208,11 +165,13 @@
             <div class="steps-grid">
                 <!-- Left Column -->
                 <div class="steps-left">
-                    <h2>Passaggi Fondamentali</h2>
-                    <p>Un percorso chiaro e definito per trasformare la tua visione in una realtà digitale di successo.</p>
+                    <h2 data-i18n="steps_title">Passaggi Fondamentali</h2>
+                    <p data-i18n="steps_desc">Un percorso chiaro e definito per trasformare la tua visione in una realtà
+                        digitale di successo.
+                    </p>
                     <div class="steps-buttons">
-                        <a href="contact.html" class="btn btn-primary">Inizia Ora</a>
-                        <a href="projects.html" class="btn btn-secondary">Vedi Progetti</a>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_start">Inizia Ora</a>
+                        <a href="projects.html" class="btn btn-secondary" data-i18n="btn_projects">Vedi Progetti</a>
                     </div>
                 </div>
 
@@ -221,57 +180,71 @@
                     <div class="step-card">
                         <span class="step-number">01</span>
                         <div class="step-content">
-                            <h4>Analisi & Strategia</h4>
-                            <p>Definizione obiettivi e target audience.</p>
+                            <h4 data-i18n="step1_title">Analisi & Strategia</h4>
+                            <!-- Target Audience: Per chi stiamo costruendo? Quali problemi risolviamo per loro? -->
+                            <p data-i18n="step1_desc">Definizione obiettivi e target audience.</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">02</span>
                         <div class="step-content">
-                            <h4>UI/UX Design</h4>
-                            <p>Progettazione interfaccia e esperienza utente.</p>
+                            <h4 data-i18n="step2_title">Bozza Grafica</h4>
+                            <!-- Bozza Grafica (Wireframe & Prototipo): Creazione di layout ad alta fedeltà -->
+                            <p data-i18n="step2_desc">Progettazione interfaccia e esperienza utente.</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">03</span>
                         <div class="step-content">
-                            <h4>Sviluppo</h4>
-                            <p>Coding frontend e integrazione backend.</p>
+                            <h4 data-i18n="step3_title">Studio dei Testi</h4>
+                            <!-- Studio dei Testi: Scrittura di contenuti ottimizzati per la conversione e scelta delle parole chiave. -->
+                            <p data-i18n="step3_desc">Scrittura di contenuti ottimizzati per la conversione e scelta
+                                delle parole chiave.</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">04</span>
                         <div class="step-content">
-                            <h4>Test & Lancio</h4>
-                            <p>Verifica qualità e pubblicazione online.</p>
+                            <h4 data-i18n="step4_title">Sviluppo</h4>
+                            <!-- Sviluppo: Assicurarsi che il sito sia perfetto su smartphone, tablet e desktop. -->
+                            <p data-i18n="step4_desc">Assicurandosi che il sito sia perfetto su smartphone, tablet e
+                                desktop.</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">05</span>
                         <div class="step-content">
-                            <h4>Test & Lancio</h4>
-                            <p>Verifica qualità e pubblicazione online.</p>
+                            <h4 data-i18n="step5_title">Integrazioni</h4>
+                            <!-- Integrazioni: Collegamento di form di contatto, newsletter, API esterne o sistemi di e-commerce. -->
+                            <p data-i18n="step5_desc">Collegamento di form di contatto, newsletter, API esterne o
+                                sistemi di e-commerce.</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">06</span>
                         <div class="step-content">
-                            <h4>Test & Lancio</h4>
-                            <p>Verifica qualità e pubblicazione online.</p>
+                            <h4 data-i18n="step6_title">Performance</h4>
+                            <!-- Performance: Ottimizzazione del caricamento immagini e minificazione del codice -->
+                            <p data-i18n="step6_desc">Ottimizzazione del caricamento immagini e minificazione del codice
+                            </p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">07</span>
                         <div class="step-content">
-                            <h4>Test & Lancio</h4>
-                            <p>Verifica qualità e pubblicazione online.</p>
+                            <h4 data-i18n="step7_title">Messa online</h4>
+                            <!-- Messa online: Configurazione del server, puntamento dei DNS e installazione del certificato SSL -->
+                            <p data-i18n="step7_desc">Configurazione del server, puntamento dei DNS e installazione del
+                                certificato SSL</p>
                         </div>
                     </div>
                     <div class="step-card">
                         <span class="step-number">08</span>
                         <div class="step-content">
-                            <h4>Test & Lancio</h4>
-                            <p>Verifica qualità e pubblicazione online.</p>
+                            <h4 data-i18n="step8_title">Analisi Dati</h4>
+                            <!-- Analisi Dati: Monitoraggio del comportamento degli utenti tramite tool di analytics. -->
+                            <p data-i18n="step8_desc">Monitoraggio del comportamento degli utenti tramite tool di
+                                analytics.</p>
                         </div>
                     </div>
                 </div>
@@ -283,8 +256,8 @@
     <section class="section mobile-cta-section">
         <div class="container">
             <div class="mobile-cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Inizia Ora</a>
-                <a href="projects.html" class="btn btn-secondary">Vedi Progetti</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="btn_start">Inizia Ora</a>
+                <a href="projects.html" class="btn btn-secondary" data-i18n="btn_projects">Vedi Progetti</a>
             </div>
         </div>
     </section>
@@ -293,15 +266,15 @@
     <section class="section filler-section">
         <div class="container">
             <div class="filler-content">
-                <h2>Ready to start?</h2>
-                <p>Let's build something amazing together.</p>
-                <a href="contact.html" class="btn btn-primary">Contact Me</a>
+                <h2 data-i18n="filler_title">Ready to start?</h2>
+                <p data-i18n="filler_desc">Let's build something amazing together.</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="filler_btn">Contact Me</a>
             </div>
         </div>
     </section>
 
-       
-    
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="three-bg.js"></script>
@@ -309,4 +282,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
