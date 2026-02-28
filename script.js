@@ -683,7 +683,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // ====================
         async function initTranslation() {
             const langBtns = document.querySelectorAll('.lang-toggle');
-            let currentLang = localStorage.getItem('lang') || 'en';
+            let currentLang = localStorage.getItem('lang') || 'it';
 
             const loadTranslations = async (lang) => {
                 try {
@@ -701,7 +701,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             };
 
             langBtns.forEach(btn => {
-                btn.textContent = currentLang === 'en' ? 'EN' : 'IT';
+                btn.textContent = currentLang === 'en' ? 'IT' : 'EN';
                 // Fade-in animation to match other elements
                 gsap.to(btn, {
                     opacity: 1,
@@ -716,7 +716,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             langBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     currentLang = currentLang === 'en' ? 'it' : 'en';
-                    const nextText = currentLang === 'en' ? 'EN' : 'IT';
+                    const nextText = currentLang === 'en' ? 'IT' : 'EN';
 
                     langBtns.forEach(b => {
                         gsap.to(b, {
